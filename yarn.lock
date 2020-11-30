@@ -1027,6 +1027,11 @@
     "@types/prop-types" "*"
     csstype "^3.0.2"
 
+"@types/ziggy-js@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@types/ziggy-js/-/ziggy-js-0.9.0.tgz#ca0e626290b94c6562a91ab2e633a7983d7bbac3"
+  integrity sha512-/hUu4foNeAHtHNpng5+eXyvbBRHH2IB0PtF6N8gbEazc4sNxYpYRqbRhBZ8lqf3GWmQn9SFpacKiGYRhHcwhbw==
+
 "@typescript-eslint/eslint-plugin@^4.8.2":
   version "4.8.2"
   resolved "https://registry.yarnpkg.com/@typescript-eslint/eslint-plugin/-/eslint-plugin-4.8.2.tgz#cf9102ec800391caa574f589ffe0623cca1d9308"
@@ -6298,7 +6303,7 @@ qs@6.7.0:
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.7.0.tgz#41dc1a015e3d581f1621776be31afb2876a9b1bc"
   integrity sha512-VCdBRNFTX1fyE7Nb6FYoURo/SPe62QCaAyzJvUjwRaIsc+NePBEniHlvxFmmX56+HZphIGtV0XeCirBtpDrTyQ==
 
-qs@^6.9.0:
+qs@^6.8.0, qs@^6.9.0:
   version "6.9.4"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.9.4.tgz#9090b290d1f91728d3c22e54843ca44aea5ab687"
   integrity sha512-A1kFqHekCTM7cz0udomYUoYNWjBebHm/5wzU/XqrBRBNWectVH0QIiN+NEcZ0Dte5hvzHwbr8+XQmguPhJ6WdQ==
@@ -8108,3 +8113,10 @@ yargs@^15.4.1:
     which-module "^2.0.0"
     y18n "^4.0.0"
     yargs-parser "^18.1.2"
+
+ziggy-js@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/ziggy-js/-/ziggy-js-1.0.2.tgz#abbcdf806597aad19e87a299f0acaf731232e1d9"
+  integrity sha512-RosrbfwsMhrfIew4Qo8JcljXanXT9MYVmuHOK749fcMeadseB+KSzFC5uFkLe9xIVX4absp3auq4HDEaxZLaHQ==
+  dependencies:
+    qs "^6.8.0"
