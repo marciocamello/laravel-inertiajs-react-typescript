@@ -1,13 +1,19 @@
-import { InertiaLink } from '@inertiajs/inertia-react'
+import { InertiaLink, usePage } from '@inertiajs/inertia-react'
 import React from 'react'
-import route from 'ziggy-js'
+import route from 'ziggy'
 
-const Menu = () => {
+interface PageProps {
+  appName: string;
+  auth: any;
+}
+
+const Menu:React.FC = () => {
+  const { auth, appName } = usePage().props as PageProps
   return (
     <nav className="navbar navbar-expand-md navbar-light bg-white shadow-sm">
       <div className="container">
-        <InertiaLink className="navbar-brand" href={route('home').url()}>
-          Bookmarks
+        <InertiaLink className="navbar-brand" href={route('home')}>
+          {appName}
         </InertiaLink>
         <button
           className="navbar-toggler"
@@ -26,7 +32,7 @@ const Menu = () => {
             <li className="nav-item">
               <InertiaLink
                 className="nav-link"
-                href={route('bookmark.index').url()}
+                href={route('bookmarks.index')}
               >
                 Bookmarks
               </InertiaLink>
@@ -34,7 +40,7 @@ const Menu = () => {
             <li className="nav-item">
               <InertiaLink
                 className="nav-link"
-                href={route('bookmark.add').url()}
+                href={route('bookmarks.add')}
               >
                 Bookmark add
               </InertiaLink>
@@ -52,7 +58,7 @@ const Menu = () => {
                 aria-haspopup="true"
                 aria-expanded="false"
               >
-                Amitav Roy
+                {auth.user.email}
               </a>
 
               <div
@@ -61,8 +67,9 @@ const Menu = () => {
               >
                 <InertiaLink
                   method="post"
-                  href={route('logout').url()}
+                  href={route('logout')}
                   className="dropdown-item"
+                  as="button"
                 >
                   Logout
                 </InertiaLink>

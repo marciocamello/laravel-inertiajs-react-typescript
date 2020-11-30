@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123123123')
         ]);
 
-        \App\Models\Bookmark::factory(10)->create();
+        \App\Models\Bookmark::factory(10)->create([
+            'is_active' => 1
+        ]);
     }
 }

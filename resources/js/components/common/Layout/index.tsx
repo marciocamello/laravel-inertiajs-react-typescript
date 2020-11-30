@@ -7,9 +7,9 @@ interface Props {
 
 const Layout:React.FC<Props> = ({ children }: Props) => {
   return <React.Fragment>
-  {/* <div className="mb-3">
+  <div className="mb-3">
     <Menu />
-  </div> */}
+  </div>
   <div className="container">{children}</div>
 </React.Fragment>
 }

@@ -22,8 +22,8 @@ const BookmarkAddPage: React.FC<Props> = ({ errors }: Props) => {
   }
 
   return <Layout>
-    <div className="r">
-      <div className="col-8">
+    <div className="row">
+      <div className="col-12">
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label htmlFor="link">Link</label>
@@ -40,7 +40,6 @@ const BookmarkAddPage: React.FC<Props> = ({ errors }: Props) => {
               {errors?.link}
             </div>
           </div>
-          <button type="submit" className="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>
